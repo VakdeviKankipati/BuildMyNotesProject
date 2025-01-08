@@ -24,20 +24,22 @@ Service Discovery (Eureka): Manages service registration and discovery for dynam
 
 Technologies and Tools:
 
-Backend: Spring Boot (Java)
+Backend: Spring Boot (Java).
 
-Database: MySQL for relational data (user profiles, notes, summaries)
+Database: MySQL for relational data (user profiles, notes, summaries).
 
-Authentication: JWT (JSON Web Tokens) for secure APIs
+Authentication: JWT (JSON Web Tokens) for secure APIs.
 
-Service Discovery: Eureka
+Service Discovery: Eureka.
 
 Speech-to-Text: Google Cloud Speech API
 
-AI and NLP : OpenAI API.
+AI  : OpenAI API.
 
-API Gateway: Spring Cloud Gateway
+API Gateway: Spring Cloud Gateway.
 
-Docker: To containerize the microservices
+TestCases : Junit and Mockito.
 
-Kubernetes: For orchestration and scaling 
+Docker: To containerize the microservices.
+
+Kubernetes: For orchestration and scaling.
