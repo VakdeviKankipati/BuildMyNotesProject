@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aiinteractionservice
+  labels:
+    app: aiinteractionservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aiinteractionservice
+  template:
+    metadata:
+      name: aiinteractionservice
+      labels:
+        app: aiinteractionservice
+    spec:
+      containers:
+        - name: aiinteractionservice
+          image: vakdevi/aiinteractionservie:v0.01
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always
+      

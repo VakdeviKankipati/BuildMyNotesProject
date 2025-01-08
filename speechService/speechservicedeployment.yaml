@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: speechservice
+  labels:
+    app: speechservice
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: speechservice
+  template:
+    metadata:
+      name: speechservice
+      labels:
+        app: speechservice
+    spec:
+      containers:
+        - name: speechservice
+          image: vakdevi/speechservice:v0.01
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always
+      

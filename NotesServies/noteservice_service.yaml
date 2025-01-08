@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: noteservice
+spec:
+  selector:
+    app: noteservice
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8082
+  type: LoadBalancer
+  

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: summaryservice
+  labels:
+    app: summaryservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: summaryservice
+  template:
+    metadata:
+      name: summaryservice
+      labels:
+        app: summaryservice
+    spec:
+      containers:
+        - name: summaryservice
+          image: vakdevi/summaryservice:v0.01
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always
+      

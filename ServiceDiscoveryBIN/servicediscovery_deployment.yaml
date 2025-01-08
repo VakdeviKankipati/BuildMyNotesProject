@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servicediscovery
+  labels:
+    app: servicediscovery
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: servicediscovery
+  template:
+    metadata:
+      name: servicediscovery
+      labels:
+        app: servicediscovery
+    spec:
+      containers:
+        - name: servicediscovery
+          image:  vakdevi/servicediscovery:v0.01
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always
+      

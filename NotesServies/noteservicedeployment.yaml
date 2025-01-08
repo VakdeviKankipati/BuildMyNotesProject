@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: noteservice
+  labels:
+    app: noteservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: noteservice
+  template:
+    metadata:
+      name: noteservice
+      labels:
+        app: noteservice
+    spec:
+      containers:
+        - name: noteservice
+          image:  vakdevi/noteservice:v0.01
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always
+      
