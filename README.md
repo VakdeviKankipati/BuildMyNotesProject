@@ -1,6 +1,6 @@
 System Overview
 
-Build My Notes will listen to lectures, transcribe them, and provide summaries in various formats such as quizzes. The system will leverage AI tools for NLP processing and summarization.
+Build My Notes is an AI-driven note-taking platform that transcribes lecture recordings, generates summaries, and creates quizzes for effective learning.
 
 
 Key Microservices
